@@ -1,0 +1,7 @@
+{
+  "restartable": "rs",
+  "ignore": [".git", "node_modules/**/node_modules"],
+  "verbose": true,
+  "watch": ["src/", "appsscript.json"],
+  "ext": "ts json"
+}

@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  clasp:
+    image: clasp:latest
+    build: .
+    tty: true
+    volumes:
+      - ./:/app/gmail-filter-funtastic
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+    working_dir: /app/gmail-filter-funtastic

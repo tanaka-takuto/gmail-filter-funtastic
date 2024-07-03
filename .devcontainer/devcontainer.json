@@ -1,0 +1,16 @@
+{
+	"name": "Clasp Development Container",
+	"dockerComposeFile": [
+		"../compose.yaml",
+	],
+	"service": "clasp",
+	"workspaceFolder": "/app/gmail-filter-funtastic",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode"
+			]
+		}
+	}
+}

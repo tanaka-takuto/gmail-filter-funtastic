@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@eslint/js": "^9.5.0",
+    "@types/google-apps-script": "^1.0.83",
+    "esbuild": "^0.21.5",
+    "globals": "^15.6.0",
+    "prettier": "^3.3.2",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.13.1"
+  },
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --banner:js=\"$(cat banner.js)\" --outdir=dist --format=iife --global-name=_entry",
+    "deploy": "clasp push -f",
+    "deploy:watch": "npx nodemon --config ./nodemon.json --exec 'npm run build && npm run deploy'",
+    "format": "prettier --write src/**/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "check_updates": "npx npm-check-updates -u"
+  }
+}
